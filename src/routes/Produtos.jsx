@@ -1,6 +1,7 @@
 import { Link } from "react-router-dom";
 import { ListaProdutos } from "../components/ListaProdutos";
 import {AiFillEdit as Editar} from "react-icons/ai";
+import {RiDeleteBin2Fill as Excluir} from "react-icons/ri";
 
 export default function Produtos() {
 
@@ -30,7 +31,7 @@ export default function Produtos() {
                     <td>{item.desc}</td>
                     <td><img src={`${item.img}`} alt={`${item.desc}`} /></td>
                     <td>{item.preco}</td>
-                    <td> <Link to={`/editar/produtos/${item.id}`}> <Editar/> </Link> / <Link to={`/excluir/produtos/${item.id}`}>Excluir</Link></td>
+                    <td> <Link to={`/editar/produtos/${item.id}`}> <Editar/> </Link> / <Link to={`/excluir/produtos/${item.id}`}> <Excluir/> </Link></td>
                   </tr>
               ))}
 
