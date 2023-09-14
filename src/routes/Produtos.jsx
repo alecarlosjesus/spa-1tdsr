@@ -3,14 +3,34 @@ import { ListaProdutos } from "../components/ListaProdutos";
 import { AiFillEdit as Editar } from "react-icons/ai";
 import { RiDeleteBin2Fill as Excluir } from "react-icons/ri";
 import styles from "./Produtos.module.css";
+import { useState, useEffect } from "react";
 
 export default function Produtos() {
   document.title = "Produtos";
 
+  const [count, setCount] = useState(0);
+
+  //Neste formato o useEffect executa sempre que ocorrer uma alteração de estado de algum elemento ou no componente.
+  // useEffect(() => {
+  //   console.log(`Executa sempre - ${count} !`);
+  // });
+
+//Neste formato o useEffect executa apenas quando ocorrer o carregamento do componente rprincipal.
+  useEffect(() => {
+    console.log("Executa apenas uma vez");
+  },[]);
+  
+  useEffect(() => {
+    console.log("Executa sempre que ocorrer uma alteração de estado do elemento ou no componente indicado no array de dependências!");
+  },[count]);
+
+
   return (
     <>
       <h1>Lista de Produtos</h1>
-
+      <div>
+        <button onClick={()=> setCount( count + 1)}>COUNTER - {count}</button>
+      </div>
       <div>
         <table className={styles.tblEstilo}>
 
