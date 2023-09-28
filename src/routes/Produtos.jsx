@@ -26,7 +26,7 @@ export default function Produtos() {
   const [open, setOpen] = useState(false);
 
   return (
-    <>
+    <> 
       <h1>Lista de Produtos</h1>
 
       {open ? <ModalInserir open={open} setOpen={setOpen}/> : ""}
