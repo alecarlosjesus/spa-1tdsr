@@ -1,7 +1,7 @@
 import { useEffect } from "react";
-import "./ModalInserir.scss";
+import "./ModalAction.scss";
 
-export default function ModalInserir(props) {
+export default function ModalAction(props) {
 
   let novoId;
 
